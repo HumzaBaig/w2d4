@@ -8,12 +8,8 @@ def two_sum_hash?(arr, target)
   arr.each do |num1|
     num2 = target - num1
 
-    if hash.has_key?(num2)
-      if num1 != num2
-        return true
-      else
-        return true if hash[num1] > 1
-      end
+    if hash[num2] != 0
+      return true if num1 != num2 || hash[num1] > 1
     end
   end
 
